@@ -1,5 +1,13 @@
-<table class="table">
-  <thead>
+<div class="text-center mt-3 mb-2">
+  <%= form_tag series_path, method: :get, class: "form-horizontal center" do %>
+    <label for="search">Search TV Series: </label>
+    <%= text_field_tag 'search', params[:search], placeholder: "Enter actor name" %>
+    <%= submit_tag 'Search!' %>
+  <% end %>
+</div>
+
+<table class="table table-striped">
+  <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
       <th scope="col">TV Series</th>
@@ -26,3 +34,6 @@
     <% end %>
   </tbody>
 </table>
+<% unless @series.present? %>
+  <p class="text-center">No records found</p>
+<% end %>

@@ -1,24 +1,16 @@
 # README
+Hello! This is a standard Rails 6 Project. You should be able to get set up by cloning this repo locally:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+# install gems
+$ bundle install
 
-Things you may want to cover:
+# setup the database
+$ bundle exec rake db:setup
 
-* Ruby version
+# run the server
+$ rails s
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# run the rails console
+$ rails c
+```
